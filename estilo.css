@@ -2,33 +2,39 @@
     background-image: url(img/stars.gif);
     margin: 0%;
     color: darkturquoise;
+    font-family: 'VT323', monospace;
 }
 .content {
     display: flex;
     justify-content: space-between;
 }
 .izq {
-  flex: 0 0 auto;
+  flex: 0 0 250px;
   display: flex;
-  justify-content: left;
-  min-height: 100px;
+  justify-content: center;
   border: 5px none;
   margin: 5px;
   margin-top: 150px;
   margin-left: 20px;
 }
 .izq img{
-    width: 278px;
+    width: 230px;
     height: 800px;
-    max-width: 200px;
     border: 5px ridge blue;
+    box-shadow: 0px 10px 20px 0px blue;
+}
+.izq img:hover{
+    filter: brightness(2);
+    transform: scale(1.05);
+    cursor: pointer;
+    z-index: 10; 
+    position: relative; 
 }
 .centro {
   flex: 0 0 auto;
   display: flex;
   border: 5px none;
   margin: 5px;
-  display: flex;
   justify-content: flex-start;
   margin-top: 0px;
   padding-top: 0px;
@@ -45,14 +51,23 @@
   flex-wrap: wrap;
   gap: 5px 5px;
   margin-top: 150px;
-  width: 300px;
+  width: 320px;
   align-content: flex-start;
 }
 
-.der img {
+.der img{
     display: block;
     width: 90px;
     height: 45px;
+    box-shadow: 0px 3px 8px 3px rgba(67, 1, 250, 0.575);
+}
+.der img:hover{
+    filter: brightness(2);
+    transform: scale(1.15);
+    cursor: pointer;
+    z-index: 10; 
+    position: relative; 
+    box-shadow: 0px 5px 10px 5px rgb(250, 1, 105);
 }
 .der img.jan {
     width: 280px;
@@ -66,6 +81,8 @@
     width: 300px;
     height: 300px;
     margin-top: 30px;
+    margin-right: 5px;
+    box-shadow: 0px 10px 20px 0px rgba(32, 5, 105, 0);
 }
 .letrastitulo{
     display: flex;
@@ -78,14 +95,22 @@
 .subtitulo {
     margin-top: 5px;
 }
+.subtitulo h1{
+    text-shadow: 2px 2px 0px rgb(192, 0, 209);
+    display: inline-block;
+    padding: 5px;
+}
 
 .pasatiempos{
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.247);
+    background-color: rgba(255, 255, 255, 0.05);
+    text-shadow: 2px 2px 0px rgb(0, 255, 13);
 }
 
-.pasatiemposizq{
-  flex: 0 0 auto;
+.pasatiemposizq, .pasatiemposcent, .pasatiemposder{
+  flex: 0 0 350px;
   display: flex;
   justify-content: center;
   border: 5px none;
@@ -93,24 +118,11 @@
   flex-direction: column;
   align-items: center;
   margin: 30px;
+  box-shadow: 0px 10px 20px 0px rgba(32, 5, 105, 0.692);
+  background-color: rgba(255, 255, 255, 0);
 }
-.pasatimeposcent{
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  border: 5px none;
-  margin: 5px;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
-}
-.pasatiemposder{
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  border: 5px none;
-  margin: 5px;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
+.pasatiempos img {
+    border: 4px outset gray;
+    padding: 2px;
+    background-color: silver;
 }
